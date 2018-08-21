@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security-3.2.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean id="Point10" class="com.example.kk.Point">
+		<property name="x" value="56" />
+		<property name="y" value="100" />
+		<constructor-arg value="Hi There!! Welcome to Spring!!"></constructor-arg>
+		<constructor-arg value="200"></constructor-arg>
+		<constructor-arg type="double" index="2" value="1657658.99"></constructor-arg>
+		<constructor-arg type="float" index="4" value="12.00"></constructor-arg>
+		<constructor-arg type="float" index="3" value="9090.00"></constructor-arg>
+	</bean>
+	<bean id="Calculator" class="com.example.kk.Calculator">
+		<constructor-arg index="0" value="10"></constructor-arg>
+		<constructor-arg index="1" value="5"></constructor-arg>
+	</bean>
+	<bean id="Animal" class="com.example.kk.Animal">
+		<constructor-arg type="float" value="10213124312.4324"></constructor-arg>
+		<constructor-arg type="double" value="13.2103809213"></constructor-arg>
+		<constructor-arg type="java.lang.String" value="Cat"></constructor-arg>
+		<constructor-arg index="3" ref="Color"></constructor-arg>
+	</bean>
+
+	<bean id="Color" class="com.example.kk.Color">
+		<constructor-arg value="BlackAndWhite"></constructor-arg>
+		<constructor-arg value="56"></constructor-arg>
+	</bean>
+
+
+</beans>
